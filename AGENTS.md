@@ -47,12 +47,12 @@ Si une synchronisation est bloquee par des changements locaux hors scope, l'agen
 
 - `hub`: interface principale utilisateur; gere les idees simples, lit les docs, explique ce qui est pret, invoque `spec`, `implementation` ou `code-health-review`, puis synthetise les retours. Il cree les specs validees et retire les idees source apres validation utilisateur. Il ne code pas.
 - `spec`: sous-agent read-only de cadrage; transforme une idee en proposition de spec exploitable et retourne au hub les questions, arbitrages et contenus a valider.
-- `implementation`: agent principal d'implementation; prend une spec dans `docs/project/specs/`, code dans le worktree d'implementation, teste, orchestre les reviews, prepare la validation manuelle, puis livre apres acceptation utilisateur.
+- `implementation`: agent principal d'implementation; prend une spec dans `docs/project/specs/`, planifie le travail, orchestre les analyses read-only utiles, code dans le worktree d'implementation, teste, orchestre les reviews, prepare la validation manuelle, puis livre apres acceptation utilisateur.
 - `technical-review`: sous-agent read-only; review code, tests, architecture, integration et risques techniques.
 - `product-review`: sous-agent read-only; review intention utilisateur, scope, experience, criteres d'acceptation et validation manuelle.
 - `code-health-review`: sous-agent read-only; audite dette, architecture, simplification, suppressions candidates et tests manquants.
 
-Les agents de review ne corrigent pas directement. Ils produisent des findings actionnables. L'agent `implementation` reste responsable des mutations et corrections. La validation finale appartient toujours a l'utilisateur.
+Les agents de review ne corrigent pas directement. Ils produisent des findings actionnables. L'agent `implementation` reste responsable du diff final, des mutations, des corrections, des tests et de la livraison. La validation finale appartient toujours a l'utilisateur.
 
 ## Routage Des Demandes
 
@@ -60,7 +60,7 @@ Les agents de review ne corrigent pas directement. Ils produisent des findings a
 - Cadrage, spec, scope, risques, dependances ou criteres d'acceptation: le hub invoque `spec`, puis applique les changements documentaires apres validation utilisateur explicite.
 - Code, tests, correction technique, UI, API, integration ou implementation de feature: le hub invoque `implementation` dans le worktree d'implementation.
 - Audit qualite code, simplification, suppression candidate ou dette technique sans mutation immediate: le hub invoque `code-health-review`.
-- Review de diff avant livraison: `implementation` invoque `technical-review` puis `product-review`.
+- Analyse avant implementation ou review de diff: `implementation` peut invoquer `technical-review` ou `product-review` en read-only, puis reste responsable des decisions et mutations.
 - Maintenance technique structurante sans changement produit: cadrer comme une spec technique dans `docs/project/specs/`. Une correction triviale peut etre traitee directement seulement si l'utilisateur la demande explicitement et que le scope est clair.
 
 Le hub reste la facade conversationnelle. Il ne remplace pas un agent specialise quand la demande releve clairement de son role.
@@ -74,6 +74,8 @@ idee dans IDEAS.md
 -> creation docs/project/specs/<slug>.md
 -> suppression de l'idee source dans IDEAS.md
 -> implementation depuis la spec
+-> checklist d'implementation
+-> analyses read-only si utiles
 -> reviews technique et produit
 -> checklist de validation manuelle
 -> validation utilisateur explicite
