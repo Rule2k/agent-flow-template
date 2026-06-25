@@ -23,6 +23,14 @@ Ce qui est explicitement exclu pour eviter le sur-scope.
 - Critere observable 1.
 - Critere observable 2.
 
+## Stress Test
+
+- Hypotheses fragiles:
+- Ambiguites qui changeraient l'implementation:
+- Risques de sur-scope:
+- Criteres d'acceptation faibles:
+- Version plus petite possible:
+
 ## Validation Manuelle
 
 Scenarios courts que l'utilisateur pourra executer ou observer pour accepter ou refuser la livraison.

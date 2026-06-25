@@ -11,10 +11,23 @@ description: Utiliser pour cadrer une idee en spec projet implementable, avec sc
 2. Diagnostiquer la maturite: idee brute, spec cadrable, extension, maintenance, question de vision ou chantier trop large.
 3. Clarifier l'intention utilisateur, le probleme, le scope, le hors scope, les dependances et les criteres d'acceptation.
 4. Proposer 2 ou 3 options de scope quand l'idee est ambigue.
-5. Recommander le plus petit scope qui teste vraiment l'intention.
-6. Decouper les idees trop larges en specs ordonnees.
-7. Identifier l'orientation technique legere utile a `implementation` sans imposer une architecture bas niveau.
-8. Garder le brouillon en conversation jusqu'a validation utilisateur explicite.
+5. Faire un stress test du cadrage: hypotheses fragiles, ambiguites qui changeraient l'implementation, risques de sur-scope, criteres d'acceptation faibles et version plus petite possible.
+6. Recommander le plus petit scope qui teste vraiment l'intention.
+7. Decouper les idees trop larges en specs ordonnees.
+8. Identifier l'orientation technique legere utile a `implementation` sans imposer une architecture bas niveau.
+9. Garder le brouillon en conversation jusqu'a validation utilisateur explicite.
+
+## Stress test du cadrage
+
+Avant de recommander une spec comme validable, challenger le cadrage avec ces angles:
+
+- hypotheses fragiles: ce qui est suppose vrai mais pas encore verifie;
+- ambiguites bloquantes: ce qui changerait vraiment l'implementation;
+- sur-scope probable: ce qui risque d'ajouter une deuxieme feature cachee;
+- criteres faibles: ce qui ne permet pas d'accepter ou refuser clairement la livraison;
+- version plus petite: tranche minimale qui teste la meme intention.
+
+Limiter les questions a 3-5 decisions vraiment utiles. Transformer les points non bloquants en risques, hors scope ou questions ouvertes.
 
 ## Checklist spec-ready
 
@@ -27,6 +40,7 @@ Le hub peut creer une spec dans `docs/project/specs/` seulement si ces points so
 - dependances;
 - risques;
 - orientation technique legere;
+- stress test du cadrage effectue;
 - criteres d'acceptation observables;
 - validation manuelle possible;
 - questions bloqueantes tranchees ou explicitees.
@@ -39,6 +53,7 @@ Le hub peut creer une spec dans `docs/project/specs/` seulement si ces points so
 ## Sorties attendues
 
 - Spec courte et implementable.
+- Stress test du cadrage avec risques, flous et version plus petite si pertinente.
 - Decoupage si l'idee initiale est trop large.
 - Questions ou arbitrages utilisateur.
 - Recommandation: continuer a cadrer, creer la spec, ou reporter.
