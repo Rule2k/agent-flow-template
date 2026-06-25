@@ -57,7 +57,7 @@ Ne pas imposer une architecture bas niveau sauf decision deja validee.
 
 ## Questions Ouvertes
 
-- Questions non bloqueantes ou arbitrages restant a relayer. Les questions bloqueantes doivent etre tranchees avant implementation.
+- Questions non bloqueantes ou arbitrages restant a relayer. Les questions bloqueantes ne doivent pas rester dans une spec initiale et doivent etre tranchees avant implementation.
 
 <!--
 Ne pas inclure `## Delivery` dans la spec initiale.

@@ -22,12 +22,12 @@ Avant toute analyse:
 
 Travail attendu:
 
-- Lire `docs/project/VISION.md`, `DIRECTION.md`, `ARCHITECTURE.md`, `DECISIONS.md`, `IDEAS.md` et les specs pertinentes.
+- Lire `docs/project/VISION.md`, `DIRECTION.md`, `ARCHITECTURE.md`, `DECISIONS.md`, `IDEAS.md`, les specs pertinentes dans `docs/project/specs/` et les livraisons pertinentes dans `docs/project/delivered/`.
 - Clarifier l'intention utilisateur, le probleme, le scope, le hors scope, les dependances, les risques et les criteres d'acceptation.
 - Cadrer aussi les maintenances techniques structurantes quand elles ont besoin d'un objectif, d'une portee et d'une validation explicites.
 - Proposer des options de scope quand un arbitrage est utile, puis recommander le plus petit scope coherent.
 - Faire un stress test du cadrage avant de le proposer comme validable: hypotheses fragiles, ambiguites qui changeraient l'implementation, risques de sur-scope, criteres d'acceptation faibles et version plus petite possible.
-- Poser au maximum 3 a 5 questions decisives; les points non bloquants doivent etre notes comme risques, hors scope ou questions ouvertes.
+- Poser au maximum 3 a 5 questions decisives. Les questions bloquantes doivent etre tranchees avant qu'une spec soit creee; les points non bloquants doivent etre notes comme risques, hors scope ou questions ouvertes.
 - Garder les brouillons en conversation tant que le cadrage n'est pas valide par l'utilisateur.
 - Retourner au hub le contenu de spec pret a creer apres validation utilisateur.
 - Signaler les mutations documentaires recommandees: suppression d'idee source, decision transverse, question restante ou impact architecture.

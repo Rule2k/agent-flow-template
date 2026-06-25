@@ -2,6 +2,8 @@
 
 Ce document donne une carte rapide du projet pour un agent qui arrive avec peu de contexte. Il decrit l'etat reel du code et doit rester court, pratique et a jour.
 
+Dans ce template, les valeurs `a definir` sont des emplacements a remplacer; elles ne doivent pas etre traitees comme l'architecture reelle d'un projet derive.
+
 ## Stack
 
 - Runtime / framework: a definir.
@@ -11,6 +13,8 @@ Ce document donne une carte rapide du projet pour un agent qui arrive avec peu d
 - Tests / tooling: a definir.
 
 ## Structure Du Projet
+
+Adapter les exemples ci-dessous a la structure reelle du projet.
 
 - `src/`: a definir.
 - `tests/`: a definir.

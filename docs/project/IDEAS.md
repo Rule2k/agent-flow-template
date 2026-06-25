@@ -6,8 +6,8 @@ Regle: quand une idee devient une spec validee dans `docs/project/specs/<slug>.m
 
 ## Idees Non Cadrees
 
-- A definir.
+<!-- Aucune idee non cadree pour le moment. Ajouter ici des entrees courtes sous forme de liste. -->
 
 ## Notes D'Ideation
 
-- A definir.
+<!-- Notes temporaires de brainstorm, a supprimer ou transformer en idee non cadree. -->

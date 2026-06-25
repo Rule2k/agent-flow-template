@@ -7,11 +7,11 @@ description: Utiliser quand une demande touche la vision, les principes, les non
 
 ## Workflow court
 
-1. Lire `VISION.md`, `DIRECTION.md`, `DECISIONS.md`, `IDEAS.md` et les specs pertinentes.
+1. Lire `VISION.md`, `DIRECTION.md`, `DECISIONS.md`, `IDEAS.md`, les specs pertinentes et les livraisons pertinentes.
 2. Identifier ce qui releve de la promesse, des principes, des non-objectifs ou d'une contrainte de direction.
 3. Relever contradictions, glissements de scope et decisions implicites.
 4. Proposer un arbitrage clair quand la vision doit etre precisee.
-5. Mettre a jour les docs seulement apres validation utilisateur explicite.
+5. Recommander les mutations documentaires. Les appliquer seulement si l'agent appelant en a la responsabilite et apres validation utilisateur explicite; `spec` et les agents de review restent read-only.
 
 ## Entrees attendues
 
@@ -39,3 +39,4 @@ description: Utiliser quand une demande touche la vision, les principes, les non
 - `docs/project/DECISIONS.md`
 - `docs/project/IDEAS.md`
 - `docs/project/specs/`
+- `docs/project/delivered/`

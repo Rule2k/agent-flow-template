@@ -7,7 +7,7 @@ description: Utiliser pour cadrer une idee en spec projet implementable, avec sc
 
 ## Workflow court
 
-1. Lire la vision, la direction, l'architecture, les decisions, l'idee source et les specs liees.
+1. Lire la vision, la direction, l'architecture, les decisions, l'idee source, les specs liees et les livraisons pertinentes.
 2. Diagnostiquer la maturite: idee brute, spec cadrable, extension, maintenance, question de vision ou chantier trop large.
 3. Clarifier l'intention utilisateur, le probleme, le scope, le hors scope, les dependances et les criteres d'acceptation.
 4. Proposer 2 ou 3 options de scope quand l'idee est ambigue.
@@ -43,7 +43,7 @@ Le hub peut creer une spec dans `docs/project/specs/` seulement si ces points so
 - stress test du cadrage effectue;
 - criteres d'acceptation observables;
 - validation manuelle possible;
-- questions bloqueantes tranchees ou explicitees.
+- questions bloquantes tranchees; questions non bloquantes explicitees.
 
 ## Entrees attendues
 
@@ -72,4 +72,6 @@ Le hub peut creer une spec dans `docs/project/specs/` seulement si ces points so
 - `docs/project/ARCHITECTURE.md`
 - `docs/project/DECISIONS.md`
 - `docs/project/IDEAS.md`
+- `docs/project/specs/`
+- `docs/project/delivered/`
 - `docs/project/templates/spec.md`

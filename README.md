@@ -2,6 +2,8 @@
 
 Base OpenCode generique pour piloter un projet avec un hub orchestrateur, un agent d'implementation autonome, des reviews read-only et des specs Markdown.
 
+`AGENTS.md` est la source canonique du flow. Ce README resume seulement les points a adapter quand le template est copie.
+
 ## Principes
 
 - `docs/project/IDEAS.md` contient uniquement les idees non cadrees.
@@ -17,20 +19,21 @@ IDEAS.md
 -> cadrage avec l'agent spec
 -> creation docs/project/specs/<slug>.md apres validation utilisateur
 -> suppression de l'idee source dans IDEAS.md
--> implementation depuis la spec
+-> commit + push direct main de la spec validee
+-> implementation depuis la spec dans le worktree d'implementation
 -> technical-review + product-review
 -> checklist de validation manuelle
 -> validation utilisateur explicite
 -> ajout ## Delivery dans la spec
 -> deplacement vers docs/project/delivered/<slug>.md
--> commit + push direct main
+-> commit + push direct main de la livraison
 ```
 
 ## Agents
 
 - `hub`: facade utilisateur et orchestration.
 - `spec`: cadrage read-only et proposition de specs validables.
-- `implementation`: implementation autonome depuis une spec.
+- `implementation`: agent primary d'implementation autonome depuis une spec, dans le worktree d'implementation.
 - `technical-review`: review read-only code, tests, architecture et integration.
 - `product-review`: review read-only intention, scope, experience utilisateur et validation.
 - `code-health-review`: audit read-only dette, simplification et architecture.
