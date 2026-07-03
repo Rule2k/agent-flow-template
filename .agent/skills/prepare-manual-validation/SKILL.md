@@ -12,7 +12,7 @@ description: Utiliser en fin d'implementation pour transformer les criteres d'ac
 3. Distinguer ce que l'agent a verifie automatiquement de ce que l'utilisateur doit juger.
 4. Produire une checklist: quoi lancer, quoi observer, cas limites, criteres d'acceptation et refus.
 5. Pendant ou apres validation, classer les retours: bug, regression, comprehension, feeling, scope, nouvelle idee.
-6. Si l'utilisateur accepte explicitement, recommander a `implementation` d'ajouter `## Delivery`, deplacer la spec vers `delivered/`, commit et push selon `AGENTS.md`.
+6. Si l'utilisateur accepte explicitement, recommander d'ajouter `## Delivery`, deplacer la spec vers `delivered/`, puis finaliser via PR selon `AGENTS.md`.
 
 ## Entrees attendues
 

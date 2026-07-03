@@ -14,7 +14,7 @@ description: Utiliser pour cadrer une idee en spec projet implementable, avec sc
 5. Faire un stress test du cadrage: hypotheses fragiles, ambiguites qui changeraient l'implementation, risques de sur-scope, criteres d'acceptation faibles et version plus petite possible.
 6. Recommander le plus petit scope qui teste vraiment l'intention.
 7. Decouper les idees trop larges en specs ordonnees.
-8. Identifier l'orientation technique legere utile a `implementation` sans imposer une architecture bas niveau.
+8. Identifier l'orientation technique legere utile a l'implementation sans imposer une architecture bas niveau.
 9. Garder le brouillon en conversation jusqu'a validation utilisateur explicite.
 
 ## Stress test du cadrage
@@ -31,7 +31,7 @@ Limiter les questions a 3-5 decisions vraiment utiles. Transformer les points no
 
 ## Checklist spec-ready
 
-Le hub peut creer une spec dans `docs/project/specs/` seulement si ces points sont assez clairs:
+Creer une spec dans `docs/project/specs/` seulement si ces points sont assez clairs:
 
 - intention utilisateur;
 - probleme ou opportunite;
@@ -62,8 +62,8 @@ Le hub peut creer une spec dans `docs/project/specs/` seulement si ces points so
 
 - Ne pas surspecifier le projet final.
 - Ne pas cacher une decision de vision dans une spec.
-- Laisser le hub creer le fichier de spec apres validation utilisateur explicite.
-- Rendre le perimetre assez clair pour que `implementation` travaille sans relire toute la conversation.
+- Laisser la session responsable creer le fichier de spec apres validation utilisateur explicite.
+- Rendre le perimetre assez clair pour que l'implementation travaille sans relire toute la conversation.
 
 ## References eventuelles
 

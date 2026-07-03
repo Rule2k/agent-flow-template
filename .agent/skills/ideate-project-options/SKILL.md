@@ -1,6 +1,6 @@
 ---
 name: ideate-project-options
-description: Utiliser dans le hub pour brainstormer, prioriser ou trier des idees projet avant cadrage par l'agent spec.
+description: Utiliser pour brainstormer, prioriser ou trier des idees projet avant cadrage de spec.
 ---
 
 # Ideate Project Options
@@ -11,7 +11,7 @@ description: Utiliser dans le hub pour brainstormer, prioriser ou trier des idee
 2. Distinguer idee brute, extension d'une spec existante, dette technique, question de vision ou contenu mineur.
 3. Proposer des pistes courtes et distinctes.
 4. Prioriser par valeur projet, risque de scope, dependances et clarte de validation.
-5. Recommander une prochaine action: garder dans `IDEAS.md`, cadrer avec `spec`, transformer en decision, ou reporter.
+5. Recommander une prochaine action: garder dans `IDEAS.md`, cadrer avec `frame-project-spec`, transformer en decision, ou reporter.
 
 ## Entrees attendues
 
@@ -29,7 +29,7 @@ description: Utiliser dans le hub pour brainstormer, prioriser ou trier des idee
 
 ## Criteres de qualite
 
-- Reserver la creation de spec finale a l'agent `spec` apres validation utilisateur.
+- Reserver la creation de spec finale a une validation utilisateur explicite.
 - Garder les intuitions comme propositions tant qu'elles ne sont pas validees.
 - Eviter les listes longues et interchangeables.
 - Favoriser les idees testables et compatibles avec la direction actuelle.

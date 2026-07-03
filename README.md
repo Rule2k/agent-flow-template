@@ -1,60 +1,61 @@
 # Agent Flow Template
 
-Base OpenCode generique pour piloter un projet avec un hub orchestrateur, un agent d'implementation autonome, des reviews read-only et des specs Markdown.
+Base OMP generique pour piloter un projet avec des documents courts, des skills projet, des agents integres au CLI et des specs Markdown.
 
 `AGENTS.md` est la source canonique du flow. Ce README resume seulement les points a adapter quand le template est copie.
 
 ## Principes
 
 - `AGENTS.md` est la source canonique du flow.
-- Le workflow se pilote par états, preuves et actions autorisées.
-- `docs/project/IDEAS.md` contient les idées non cadrées.
-- `docs/project/specs/` contient les specs non livrées: draft, validées ou intégrées selon l'état du workflow.
-- `docs/project/delivered/` contient les specs livrées et validées.
-- Le template est project-agnostique: le mode Git est configurable.
-
-Mode Git recommandé par défaut:
-
-```text
-git_finalization_mode = pr-required
-```
-
-Un projet peut déclarer explicitement `direct-main` dans son `AGENTS.md` adapté s'il accepte le push direct sur `main`.
+- Le workflow se pilote par etats, preuves et actions autorisees.
+- `docs/project/IDEAS.md` contient les idees non cadrees.
+- `docs/project/specs/` contient uniquement les specs validees et pretes a implementer.
+- `docs/project/delivered/` contient les specs livrees et validees.
+- Les skills projet vivent dans `.agent/skills/`.
+- Le template ne cree pas de systeme d'agents custom quand le CLI fournit deja exploration, implementation, review et audit.
+- Le mode Git est toujours PR obligatoire.
 
 ## Flow
 
 ```text
-Idée
--> Spec draft
--> Spec validée par l'utilisateur
--> Spec intégrée selon le mode Git du projet
--> Implémentation seulement si Definition of Ready vraie
--> Reviews + tests + checklist de validation
+Idee
+-> Cadrage en conversation
+-> Spec validee par l'utilisateur
+-> Branche dediee + PR spec vers main
+-> Merge humain explicite
+-> Implementation seulement quand la spec est integree
+-> Tests + reviews + checklist de validation
+-> PR implementation/livraison vers main
 -> Validation utilisateur explicite
--> Delivery + delivered
--> Finalisation selon le mode Git du projet
+-> Delivery + delivered sur la branche PR
+-> Merge humain explicite
 ```
-
-## Agents
-
-- `hub`: facade utilisateur et orchestration.
-- `spec`: cadrage read-only et proposition de specs validables.
-- `implementation`: agent primary d'implementation autonome depuis une spec, dans le worktree d'implementation.
-- `technical-review`: review read-only code, tests, architecture et integration.
-- `product-review`: review read-only intention, scope, experience utilisateur et validation.
-- `code-health-review`: audit read-only dette, simplification et architecture.
 
 ## Skills
 
-- `ideate-project-options`: ideation et priorisation dans le hub.
+- `ideate-project-options`: ideation, priorisation et tri d'idees.
 - `frame-project-spec`: cadrage structure d'une spec.
 - `maintain-project-vision`: protection de la vision et des non-objectifs.
 - `prepare-manual-validation`: checklist de validation utilisateur.
 - `review-code-health`: audit sante code et architecture.
 
+## Agents
+
+Utiliser les agents integres du CLI courant pour la mecanique:
+
+- exploration read-only;
+- planification;
+- implementation;
+- review technique;
+- avis senior;
+- audit.
+
+Ne creer un agent custom projet que si un besoin specifique n'est pas couvert par les agents integres et qu'un skill ne suffit pas.
+
 ## Utilisation
 
 1. Copier ce template pour creer un nouveau projet.
 2. Adapter `docs/project/VISION.md`, `DIRECTION.md` et `ARCHITECTURE.md`.
-3. Adapter le chemin du worktree d'implementation dans `AGENTS.md` si la convention par defaut ne convient pas.
-4. Redemarrer OpenCode apres toute modification de `.opencode/`, `opencode.json` ou des agents.
+3. Adapter le chemin du worktree d'implementation dans `AGENTS.md` si la convention `../<repo>-impl` ne convient pas.
+4. Adapter les skills dans `.agent/skills/` si le projet a des contraintes metier specifiques.
+5. Redemarrer OMP apres toute modification de `AGENTS.md` ou `.agent/skills/`.
