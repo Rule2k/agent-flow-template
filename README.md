@@ -6,27 +6,33 @@ Base OpenCode generique pour piloter un projet avec un hub orchestrateur, un age
 
 ## Principes
 
-- `docs/project/IDEAS.md` contient uniquement les idees non cadrees.
-- `docs/project/specs/` contient les specs validees et pretes a implementer.
-- `docs/project/delivered/` contient les specs livrees et validees.
-- `docs/project/templates/spec.md` sert de base aux nouvelles specs.
-- L'emplacement du fichier indique la phase de travail.
+- `AGENTS.md` est la source canonique du flow.
+- Le workflow se pilote par états, preuves et actions autorisées.
+- `docs/project/IDEAS.md` contient les idées non cadrées.
+- `docs/project/specs/` contient les specs non livrées: draft, validées ou intégrées selon l'état du workflow.
+- `docs/project/delivered/` contient les specs livrées et validées.
+- Le template est project-agnostique: le mode Git est configurable.
+
+Mode Git recommandé par défaut:
+
+```text
+git_finalization_mode = pr-required
+```
+
+Un projet peut déclarer explicitement `direct-main` dans son `AGENTS.md` adapté s'il accepte le push direct sur `main`.
 
 ## Flow
 
 ```text
-IDEAS.md
--> cadrage avec l'agent spec
--> creation docs/project/specs/<slug>.md apres validation utilisateur
--> suppression de l'idee source dans IDEAS.md
--> commit + push direct main de la spec validee
--> implementation depuis la spec dans le worktree d'implementation
--> technical-review + product-review
--> checklist de validation manuelle
--> validation utilisateur explicite
--> ajout ## Delivery dans la spec
--> deplacement vers docs/project/delivered/<slug>.md
--> commit + push direct main de la livraison
+Idée
+-> Spec draft
+-> Spec validée par l'utilisateur
+-> Spec intégrée selon le mode Git du projet
+-> Implémentation seulement si Definition of Ready vraie
+-> Reviews + tests + checklist de validation
+-> Validation utilisateur explicite
+-> Delivery + delivered
+-> Finalisation selon le mode Git du projet
 ```
 
 ## Agents
