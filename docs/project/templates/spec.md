@@ -62,13 +62,13 @@ Ne pas imposer une architecture bas niveau sauf decision deja validee.
 <!--
 Ne pas inclure `## Delivery` dans la spec initiale.
 
-Apres validation utilisateur explicite, `implementation` ajoute une section
+Apres validation utilisateur explicite, la session responsable ajoute une section
 `## Delivery` avec:
 
 - resume de livraison;
 - tests, lint, build ou validations lances;
-- resultat technical-review;
-- resultat product-review;
+- resultat de review technique;
+- resultat de review produit;
 - validation utilisateur explicite;
 - risques restants.
 

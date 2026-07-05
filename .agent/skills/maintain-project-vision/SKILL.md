@@ -11,7 +11,7 @@ description: Utiliser quand une demande touche la vision, les principes, les non
 2. Identifier ce qui releve de la promesse, des principes, des non-objectifs ou d'une contrainte de direction.
 3. Relever contradictions, glissements de scope et decisions implicites.
 4. Proposer un arbitrage clair quand la vision doit etre precisee.
-5. Recommander les mutations documentaires. Les appliquer seulement si l'agent appelant en a la responsabilite et apres validation utilisateur explicite; `spec` et les agents de review restent read-only.
+5. Recommander les mutations documentaires. Les appliquer seulement si la session appelante en a la responsabilite et apres validation utilisateur explicite; les agents de cadrage, audit et review restent read-only.
 
 ## Entrees attendues
 
